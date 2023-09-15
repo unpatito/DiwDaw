@@ -1,0 +1,32 @@
+table, tr, td{
+    border: black 2px solid;
+    text-align: center;
+    
+}
+
+table{
+    width: 600px;
+    height: 600px;
+    text-align: justify;
+    margin: auto;
+}
+h1{text-align: center;}
+
+.serv{
+    background-color: orange;
+}
+.emp  {
+    background-color: rgb(102, 236, 102);
+}
+.cli{
+    background-color: pink;
+}
+.des{
+    background-color: yellow;
+}
+.int{
+    background-color: rgb(106, 168, 240);
+}
+.tut{
+    background-color: rgb(160, 161, 78);
+}
