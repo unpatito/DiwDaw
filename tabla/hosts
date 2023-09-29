@@ -1,0 +1,24 @@
+# Standard host addresses
+127.0.0.1  localhost
+::1        localhost ip6-localhost ip6-loopback
+ff02::1    ip6-allnodes
+ff02::2    ip6-allrouters
+# This host address
+127.0.1.1  lucas-virtualbox
+192.168.4.201 www.diw01.com
+192.168.4.202 www.diw02.com
+192.168.4.203 www.diw03.com
+192.168.4.204 www.diw04.com
+192.168.4.205 www.diw05.com
+192.168.4.206 www.diw06.com
+192.168.4.207 www.diw07.com
+192.168.4.208 www.diw08.com
+192.168.4.209 www.diw09.com
+192.168.4.210 www.diw10.com
+192.168.4.211 www.diw11.com
+192.168.4.212 www.diw12.com
+192.168.4.213 www.diw13.com
+192.168.4.214 www.diw14.com
+192.168.4.215 www.diw15.com
+192.168.4.216 www.diw16horarios.com
+192.168.4.217 www.diw17horarios.com
