@@ -1,0 +1,37 @@
+body {
+  margin: auto 150px;
+  padding: 0;
+}
+a {
+  margin-right: 10%;
+  font-size: 22px;
+}
+
+.tit {
+  font-size: 40px;
+}
+.nav {
+}
+.date {
+}
+.line {
+}
+.lorem1 {
+  background-color: rgb(207, 206, 206);
+
+  padding: 2%;
+}
+.foo {
+  text-align: center;
+}
+.side-bar {
+  text-align: center;
+  width: 30%;
+}
+.container {
+  width: 70%;
+}
+.container-gordo {
+  display: flex;
+  flex-direction: row;
+}
