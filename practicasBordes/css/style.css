@@ -22,7 +22,7 @@
     height: 100px;
     margin: 20px;
     text-align: center;
-    font-size: 48px;
+    font: bold 48px verdana, sans-serif;
     
 }
 hr{
@@ -48,10 +48,8 @@ hr{
     border-radius: 100px;
 }
 .divs2{
-    align-items: center;
     border: 2px solid black;
     height: 100px;
-    
     font: bold 48px verdana, sans-serif;
     margin: auto;
     margin-bottom:30px ;
