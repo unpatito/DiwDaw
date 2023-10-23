@@ -1,0 +1,33 @@
+.martillo {
+    position:relative;
+    width:110px;
+    height:190px;
+    padding:16px;
+    border:1px dotted gray;
+    border-radius:9px;
+    float:left;
+   
+    
+    }
+
+    .martillo:hover{
+        transform:translate(200px, 0px) rotate(33deg)
+scale(0.5,0.5);
+     }
+    /*
+    .martillo:hover{
+        transform:skew(10deg, 25deg);
+     }
+     
+     .martillo:hover{
+        transform:scale(1, -1);
+     }
+
+.martillo:hover{
+   
+    transform:rotate(36000000000000000000000000000000000009deg);
+    transition: 1s;
+   
+    
+ } */
+
