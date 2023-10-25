@@ -20,7 +20,7 @@ ul{
 }
 
 .submenu li{
-    position: absolute;
+   
     z-index: 2;
     width: 100px;
     text-align: center;
@@ -33,12 +33,16 @@ ul{
     overflow:  hidden ;
     transition:0.4s;
     animation: linear;
+    justify-content: center;
     
     
 }
 .submenu li{
     background-color: #313131;
 
+}
+.submenu li a{
+    color:white;
 }
 .submenu li:hover{
     background-color: #444;
