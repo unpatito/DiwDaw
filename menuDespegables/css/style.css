@@ -5,10 +5,14 @@
 a{text-decoration: none;
 color: black;
 }
+.menu > a{
+    margin-right:30px ;
+}
 
-.menu li:hover{
-color: red;
+.menu > a:hover{
 text-decoration: none;
+color: red;
+
 }
 
 ul:first-child{
@@ -33,13 +37,10 @@ ul:first-child{
     overflow:  hidden ;
     transition:0.4s;
     animation: linear;
+    background-color: #313131;
    
     
     
-}
-.submenu li{
-    background-color: #313131;
-
 }
 .submenu li a{
     color:white;
