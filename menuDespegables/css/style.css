@@ -38,10 +38,12 @@ ul:first-child{
     transition:0.4s;
     animation: linear;
     background-color: #313131;
+
    
     
     
 }
+
 .submenu li a{
     color:white;
 }
