@@ -26,14 +26,43 @@
     border-radius: 20px 20px 0px 0px;
 
   }
+
+ h1 > img{
+    position: absolute;
+    left: 20px;
+  }
   
   h1 {
-    background-image: url(../imgs/logo.png);
-    background-repeat: no-repeat;
-    background-position: 25px;
+    position: relative;
     align-items: center;
     padding: 20px 100px 20px 100px;
   }
+  .chincheta{
+    position: absolute;
+    width: 35px;
+    height: 49px;
+    top: -91px;
+    background-image: url(../imgs/chincheta.png);
+   
+  }
+  article:nth-child(1) .article_header .chincheta{
+    left: 199px; 
+    transform: rotate(-2deg);
+  }
+  article:nth-child(2) .article_header .chincheta{
+    left: 120px; 
+  }
+  article:nth-child(3) .article_header .chincheta{
+    left: 30px; 
+    
+  }
+  article:nth-child(1){
+    transform: rotate(-2deg);
+  }
+  article:nth-child(3){
+    transform: rotate(2deg);
+  }
+
   
   nav {
     font-family: "Courier New", Courier, monospace;
@@ -41,6 +70,16 @@
     color: silver;
     text-align: center;
     background: linear-gradient(to bottom, rgb(201, 173, 49), rgb(240, 243, 60));
+  }
+  nav ul li{
+    color: white;
+    text-shadow:  0px 0px 5px white;
+
+  }
+  nav ul li:hover{
+    text-shadow: 2px 2px 0px red;
+    transition: 0,5s;
+   
   }
   li {
     padding-top: 80px;
@@ -75,9 +114,6 @@
     background-color: white;
    /* background-image: url(../imgs/lgrey008.jpg);*/
     overflow: hidden;
-  }#article_header_java {
-    
-    
   }
   article {
     width: 240px;   
@@ -91,7 +127,7 @@
     border-style:solid;
     border-image-source: url("../imgs/movil.png");
     border-image-slice: 65 20 65 20;
-   
+   margin-top: 30px;
   }
   
   .clearfix:before,
@@ -101,9 +137,9 @@
     display: table;
     
   }
-  #article_header {
+  .article_header {
     border-bottom: 1px solid #999999;
-    
+    position: relative;
   }
   
   h2 {
