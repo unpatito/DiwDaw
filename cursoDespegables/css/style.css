@@ -160,4 +160,52 @@
   #java{
     background:radial-gradient(circle, #b3bdc4 0%, #ffffff 100%);
   }
+  nav .submenu li{
+    position:absolute;
+    z-index: 2;
+    width: 100px;
+    text-align: center;
+    left: 50%;
+    margin-left: -40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7em;
+    height: 0px;
+    transition:0.4s;
+    animation: linear;
+    overflow:  hidden ;
+    color: white;
+   
+    
+ }
+ .submenu li:first-child{
+  position: absolute;
+  border-radius: 3px 3px 0px 0px;
+  margin-top: 25px;
+}
+.submenu li:last-child{
+  border-radius: 0px 0px 3px 3px ;
+}
+ nav .submenu li:hover{
+  background-color: orange;
   
+
+}
+ .menu:hover >.submenu li{
+  height: 30px;
+  overflow: visible;
+  display: block;
+  background-color: orange;
+}
+
+nav .submenu li:hover{
+  background-color: #f19720;
+  
+
+}
+
+
+.submenu a{
+  padding: 12px;
+  color: #fff;
+  display: block;
+}

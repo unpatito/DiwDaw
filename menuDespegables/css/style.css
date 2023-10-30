@@ -37,11 +37,7 @@ ul:first-child{
     overflow:  hidden ;
     transition:0.4s;
     animation: linear;
-    background-color: #313131;
-
-   
-    
-    
+    background-color: #313131; 
 }
 
 .submenu li a{
