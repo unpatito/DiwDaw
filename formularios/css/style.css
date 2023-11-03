@@ -1,0 +1,70 @@
+
+@font-face {
+    font-family: Gothic;
+    src: url('../League_Gothic/LeagueGothic-Regular-VariableFont_wdth.ttf');
+    }
+#page{
+    margin-left:20% ;
+    margin-right:20% ;
+}
+form{
+    padding: 10px auto 10px auto;
+    border: 2px 0px 2px 0px solid #888;
+    width: 710px;
+    text-align: center;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.2) ;
+    background-image: url("../img/bg-form.png");
+    background-repeat: no-repeat;
+    background-position:bottom ;
+
+}
+label{
+
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+form>div{
+    margin-bottom:15px ;
+}
+
+h1{
+    font-size: 2em;
+    padding-bottom:20px ;
+    background:
+url(../img/bg-formtitle-left.png) left  no-repeat,
+url(../img/bg-formtitle-right.png) right  no-repeat;
+background-size: 100px auto;
+}
+
+#enviar{
+    border-radius: 5px;
+    background: radial-gradient(circle, rgb(144, 144, 144) 0%, rgb(72, 72, 72) 100%);
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: Tahoma, Geneva, sans-serif;
+    opacity: 80%;
+
+}
+#enviar:hover{
+    opacity: 100%;
+    transition: 0.25s linear;
+}
+
+input { background: transparent no-repeat top right; }
+input:required { background-image: url('../img/required.png'); }
+input:focus:invalid { background-image: url('../img/invalid.png'); }
+input:focus:valid { background-image: url('../img/valid.png'); }
+input:focus {
+    background-color: #484848;
+    color: #fff;
+    text-shadow: none;
+  }
+
+  
+
+label, #enviar{
+        font-family: Gothic;
+    }

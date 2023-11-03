@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="page">
+      
+        <form id="registro" method="post">
+            <h1>Regístrate!</h1>
+            <div>
+                <label for="nombre">Mi nombre es: </label>
+                <input type="text" name="nombre" required autofocus>
+            </div>
+            <div>
+                <label for="email">Mi email es: </label>
+                <input type="email" name="email" required multiple>
+            </div>
+            <div>
+                <label for="recuerdame">Recuérdame en este equipo </label>
+                <input type="checkbox" name="recuerdame">
+            </div>
+            <label for="url">Mi direccion web es: </label>
+            <input type="url" name="url" placeholder="http://ejemplo.com">
+            <div>
+                <div>
+                    <label for="password1">Me gustaria que mi password fuera: </label>
+                    <span>(al menos 6 caracteres sin espacios)</span><br>
+                    <input type="password" name="password1" required max="6">
+                </div>
+                <div>
+                    <label for="password2">Mi password repetida es: </label>
+                    <input type="password" name="password2" required max="6">
+                </div>
+                <div>
+                    <label for="conocimientos">En una escala del 1 al 10, mis conocimientos de HTML5 son: </label>
+                    <input type="range" name="conocimientos" min="1" max="10">
+                </div>
+                <div>
+                    <label for="fechaInicio">Por favor, inicia mi suscripcion el dia : </label>
+                    <input type="date" name="fechaInicio" required placeholder="dd/mm/aaaa">
+                </div>
+              <div>
+                <label for="cantidad">Me gustaria recibir <input type="number" name="cantidad" min="0" max="5" value="1"> copias de el Manual de
+                    HTML5. </label>
+              </div>
+               <div>
+                <label for="tambienCSS3">Tambien registrame para el Manual de CSS3: </label>
+                <input type="checkbox" name="tambienCSS3">
+               </div>
+               <div>
+                <button id="enviar">ENVIAME</button>
+               </div>
+               
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>
