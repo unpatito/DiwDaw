@@ -3,9 +3,15 @@
     font-family: Gothic;
     src: url('../League_Gothic/LeagueGothic-Regular-VariableFont_wdth.ttf');
     }
+    @font-face {
+        font-family: ACK;
+        src: url('../ACKNO.TTF');
+        }
 #page{
     margin-left:20% ;
     margin-right:20% ;
+    width: 100%;
+
 }
 form{
     padding: 10px auto 10px auto;
@@ -17,6 +23,7 @@ form{
     background-image: url("../img/bg-form.png");
     background-repeat: no-repeat;
     background-position:bottom ;
+    
 
 }
 label{
@@ -30,6 +37,7 @@ form>div{
 }
 
 h1{
+    font-family: ACK;
     font-size: 2em;
     padding-bottom:20px ;
     background:
@@ -53,7 +61,12 @@ background-size: 100px auto;
     transition: 0.25s linear;
 }
 
-input { background: transparent no-repeat top right; }
+input { background: transparent no-repeat top right;
+border:none;
+border-bottom: 2px solid black;
+text-align: center;
+
+}
 input:required { background-image: url('../img/required.png'); }
 input:focus:invalid { background-image: url('../img/invalid.png'); }
 input:focus:valid { background-image: url('../img/valid.png'); }
@@ -62,6 +75,7 @@ input:focus {
     color: #fff;
     text-shadow: none;
   }
+  
 
   
 
