@@ -109,11 +109,14 @@
   }
   
   #content {
+    display: flex;
+    flex-direction:row;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.8em;
     background-color: white;
    /* background-image: url(../imgs/lgrey008.jpg);*/
     overflow: hidden;
+
   }
   article {
     width: 240px;   
@@ -242,7 +245,73 @@ nav > ul > li > ul > li:first-child:before {
   z-index: 19;
 }
 
-.submenu > a{
-  text-decoration: none;
-  color: white;
+/* estilos para la barra de navegación y progreso */
+#barra
+{
+width: 705px;
+margin:5px;
+height: 16px;
+padding: 2px;
+border: 1px solid #CCCCCC;
+background: #EEEEEE;
+}
+#progreso
+{
+position: absolute;
+width: 0px;
+height: 16px;
+background: rgba(0,0,150,.2);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+main>nav>input {
+    width: 100px;
+    height: 40px;
+    border-color: #f7751f;
+    color: white;
+    margin-bottom: 5px;
+    padding: 2px;
+    background-color: #ff7e42;
+    text-align: center;
+    border-radius: 3px;
+    
+    
+}
+main>nav>label {
+    width: 100px;
+    height: 40px;
+    
+    color: black;
+    margin-bottom: 5px;
+    padding: 2px;
+    
+    text-align: center;
+    margin-top: 7px;
+    
+    
+}
+#reproductor{
+
+}
+
+main>nav{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 0px;
+    margin-left:80px ;
+    margin-top: 20px;
+   
+}
+
+#barra{
+    border: 10px solid grey;
+}
+#reproductor{
+    border: 10px solid grey;
 }
