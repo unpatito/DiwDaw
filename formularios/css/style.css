@@ -3,7 +3,7 @@
     font-family: Gothic;
     src: url('../League_Gothic/LeagueGothic-Regular-VariableFont_wdth.ttf');
     }
-    @font-face {
+@font-face {
         font-family: ACK;
         src: url('../ACKNO.TTF');
         }
