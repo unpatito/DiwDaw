@@ -9,10 +9,12 @@
   src: url("../fonts/Abel/Abel-Regular.ttf");
 }
 
+
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   background: linear-gradient(to bottom, #f7751f, #ffffff);
   background-repeat: no-repeat;
@@ -114,11 +116,10 @@ li {
 }
 
 #content {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 0.8em;
-  background-color: white;
-  /* background-image: url(../imgs/lgrey008.jpg);*/
-  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px;
+  min-height: 500px;
 }
 article {
   width: 240px;
@@ -252,61 +253,140 @@ nav > ul > li > a {
   text-decoration: none;
   color: white;
 }
-
 main {
-  background-image: url("../imgs/fondoForm.jpg");
-  background-repeat: no-repeat;
+  padding: 20px 0px 20px 20px;
+  background-image: url(../imgs/fondoForm.jpg);
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
-  text-align: center;
+  border-radius: 20px;
+  text-align: left;
 }
+
 #contenedorFormulario {
   position: relative;
   display: inline-block;
   margin: 50px;
   width: 600px;
   padding: 20px 50px 20px 50px;
-  background-color: rgb(200, 200, 200, 0.7);
-  text-align: left;
-  box-shadow: 3px 0px 8px rgb(0, 0, 0, 0.4);
-  height: 400px;
-}
-#contenedorFormulario > h1 {
-  position: absolute;
-  margin-top: -16px;
-  margin-left: 490px;
-  background-color: rgb(255, 255, 255, 0.7);
-  font-family: "Aguafina Script", cursive;
-  letter-spacing: 5px;
-  text-shadow: 0px 0px 2px #777;
-  padding: 0px 10px 0px 10px;
+  background: rgba(200, 200, 200, 0.7);
+  box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.4);
+  
 }
 
-form > div {
-  /* display: flex;
-    flex-direction: column;*/
+#contenedorFormulario h1 {
+  position: absolute;
+  top: -16px;
+  left: 490px;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: "Aguafina Script", cursive;
+  font-style: italic;
+  color: #333;
+  letter-spacing: 5px;
+  box-shadow: 0px 0px 2px #777;
+  padding: 0px 10px 0px 10px;
+  margin: 0px 10px 0px 10px;
+}
+
+#formm div {
   display: inline-block;
   border: 1px solid #e5e5e5;
-  box-shadow: 0px 1px 4px rgb(0, 0, 0, 0.3),
-    inset 0px 0px 40px rgb(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), inset 0px 0px 40px rgba(0, 0, 0, 0.1);
   color: black;
   font-weight: bold;
   padding: 1px 4px 1px 45px;
   margin-bottom: 10px;
-  transition: 0.4s all ease-in;
+  transition: all 0.4s ease-in;
 }
-input[type="text"],
-input[type="email"] {
+
+#formm input[type="text"],
+#formm input[type="email"],
+#formm textarea {
   height: 32px;
   width: 330px;
-}
-textarea {
-  width: 330px;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), inset 0px 0px 40px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: bold;
+  padding: 1px 4px 1px 45px;
+  transition: all 0.4s ease-in;
 }
 
-input[type="text"]:focus, input[type="text"]:focus {
-    width: 370px;
-    box-shadow: 0px 0px 12px rgb(255, 255, 255);
-
-
+#formm input[type="text"]:focus,
+#formm input[type="email"]:focus {
+  width: 370px;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
 }
+
+
+
+#formm input[type="text"].nombre:valid{
+  background: url(../imgs/valid.png) 390px center no-repeat, url(../imgs/icon-nombre.png) 10px center no-repeat;
+}
+
+
+#formm input[type="email"].correo:valid {
+  background: url(../imgs/valid.png) 390px center no-repeat, url(../imgs/icon-correo.png) 10px center no-repeat;
+}
+
+
+
+#formm input[type="text"].nombre:invalid {
+  background: url(../imgs/invalid.png) 390px center no-repeat, url(../imgs/icon-nombre.png) 10px center no-repeat
+}
+#formm input[type="email"].correo:invalid {
+  background: url(../imgs/invalid.png) 390px center no-repeat, url(../imgs/icon-correo.png) 10px center no-repeat;
+}
+
+#formm input[type="text"].nombre:focus,#formm input[type="email"].correo:focus, textarea:focus {
+  background-color:white ;
+}
+
+.req>label::after {
+  content: '*';
+  width: 10px;
+  margin: 2px;
+}
+
+#formm textarea {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  width: 90%;
+  height: 150px;
+  background: url(../imgs/icon-mensaje.png) 10px center no-repeat;
+}
+
+#formm textarea:focus {
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+  background-color: white;
+}
+
+#formm input[type="submit"] {
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  border: 1px solid #434343;
+  color: white;
+  background: linear-gradient(to bottom, #5e5e5e, #2a2a2a);
+  box-shadow: inset 0px 1px 1px 1px #353535;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+#formm input[type="submit"]:hover {
+  background: linear-gradient(to top, #5e5e5e, #2a2a2a);
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 0px 0px 20px 20px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-family: "Courier New", Courier, monospace;
+  color: #404040;
+  font-size: 1em;
+}
+
+
