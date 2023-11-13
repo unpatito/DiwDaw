@@ -291,11 +291,11 @@ nav>ul>li>a{
 }
 }
 .chincheta1{
-  animation: mueveChincheta1 ease-in 5s;
+  animation: mueveChincheta1 ease-in 1s;
 }
 
 .article1{
-  animation: animArticle1  0.5s 5s forwards;
+  animation: animArticle1  0.5s 1s forwards;
 }
 
 
@@ -320,7 +320,7 @@ nav>ul>li>a{
 
 }
 .chincheta2{
-  animation: mueveChincheta2 ease-in 1s 5.5s ;
+  animation: mueveChincheta2 ease-in 1s 1.5s ;
 }
 
 @keyframes mueveChincheta3 {
@@ -332,7 +332,7 @@ nav>ul>li>a{
   }
 }
 .chincheta3{
-  animation: mueveChincheta3 1s 6.5s forwards;
+  animation: mueveChincheta3 1s 2.5s forwards;
 }
 
 @keyframes animArticle3{
@@ -344,5 +344,5 @@ nav>ul>li>a{
   }
 }
 .article3{
-  animation: animArticle3 1s 7.5s forwards;
+  animation: animArticle3 0.5s 3.5s forwards;
 }
