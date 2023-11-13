@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap");
+
+@font-face {
+  font-family: Lucky;
+  src: url("../fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf");
+}
+@font-face {
+  font-family: Abel;
+  src: url("../fonts/Abel/Abel-Regular.ttf");
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #f7751f, #ffffff);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+  text-align: center;
+}
+
+#page {
+  width: 1100px;
+  margin: 0px auto 0px auto;
+  text-align: left;
+}
+
+header {
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  font-size: 1.1em;
+  border-bottom: 6px solid black;
+  background: linear-gradient(to bottom, #006699, #44baf5);
+  border-radius: 20px 20px 0px 0px;
+}
+
+h1 > img {
+  position: absolute;
+  left: 20px;
+}
+
+h1 {
+  position: relative;
+  align-items: center;
+  padding: 20px 100px 20px 100px;
+  font-family: Lucky;
+}
+.chincheta {
+  position: absolute;
+  width: 35px;
+  height: 49px;
+  top: -91px;
+  background-image: url(../imgs/chincheta.png);
+}
+article:nth-child(1) .article_header .chincheta {
+  left: 199px;
+  transform: rotate(-2deg);
+}
+article:nth-child(2) .article_header .chincheta {
+  left: 120px;
+}
+article:nth-child(3) .article_header .chincheta {
+  left: 30px;
+}
+article:nth-child(1) {
+  transform: rotate(-2deg);
+}
+article:nth-child(3) {
+  transform: rotate(2deg);
+}
+
+nav {
+  font-family: Lucky;
+  font-size: 1.4em;
+  color: silver;
+  text-align: center;
+  background: linear-gradient(to bottom, rgb(201, 173, 49), rgb(240, 243, 60));
+}
+nav ul li {
+  color: white;
+  text-shadow: 2px 2px #f06529;
+}
+nav ul li:hover {
+  text-shadow: 0px 0px 5px #ff7e42;
+  transition: 0, 1s;
+}
+li {
+  padding-top: 80px;
+  margin: 0px 100px 20px 100px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+#C {
+  background-image: url(../imgs/book.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top: 10px;
+}
+#V {
+  background-image: url(../imgs/film.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top: 10px;
+}
+#CO {
+  background-image: url(../imgs/mail.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top: 10px;
+}
+
+#content {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px;
+  min-height: 500px;
+}
+article {
+  width: 240px;
+  background-color: white;
+  text-align: center;
+  line-height: 1.8em;
+  padding: 5px 5px 22px 5px;
+  margin: 30px;
+  float: left;
+  border-width: 65px 20px 65px 20px;
+  border-style: solid;
+  border-image-source: url("../imgs/movil.png");
+  border-image-slice: 65 20 65 20;
+  margin-top: 30px;
+  font-family: Abel;
+}
+
+.clearfix:before,
+.clearfix:after,
+#content {
+  width: 100%;
+  display: table;
+}
+.article_header {
+  border-bottom: 1px solid #999999;
+  position: relative;
+}
+
+h2 {
+  padding: 10px;
+  font-size: 1.2em;
+  text-shadow: 5px 5px 5px grey;
+}
+
+footer {
+  color: white;
+  font-size: 0.7em;
+  text-align: center;
+  background: linear-gradient(to bottom, #44baf5, #006699);
+  border-top: 6px solid black;
+  padding: 15px 15px;
+  border-radius: 0px 0px 20px 20px;
+}
+#java {
+  background: radial-gradient(circle, #b3bdc4 0%, #ffffff 100%);
+}
+
+/*Submenu Desplegable*/
+.submenu {
+  /*El padre marca origen de las coordenadas*/
+  position: relative;
+}
+
+/*Enlaces del submenú*/
+.submenu > ul > li > a {
+  color: white;
+  margin: auto;
+  text-decoration: none;
+}
+
+/*Todo el submenú*/
+.submenu > ul {
+  /*Hijo marca las coordenadas como desea, por ser su padre relative*/
+  position: absolute;
+  left: 10px;
+  /*Para que se mantenga oculto*/
+  height: 0px;
+  overflow: hidden;
+  width: 145px;
+  /*Transición de altura, tipo y duración*/
+  transition: height linear 0.2s;
+  /*Para que no se solapen*/
+  z-index: 2;
+}
+/*La transición*/
+.submenu:hover > ul {
+  height: 200px;
+}
+
+/*Cada elemento del submenú */
+.submenu > ul > li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  margin: 0px;
+  background-color: #ff7e42;
+}
+/*Solo Impares*/
+.submenu > ul > li:nth-child(odd) {
+  background-color: #f06529 !important;
+}
+
+/* Redondear los bordes */
+.submenu > ul > li:first-child {
+  /*Redondeo superior*/
+  border-radius: 8px 8px 0px 0px;
+  margin-top: 15px;
+  position: relative;
+}
+.submenu > ul > li:last-child {
+  /*Redondeo inferior*/
+  border-radius: 0px 0px 8px 8px;
+}
+
+/*Para que aparezca el triángulo en el menú*/
+/*Son el 1º hijo del 2º nivel del submenú*/
+nav > ul > li > ul > li:first-child:before {
+  /*Sino nos sale nada*/
+  content: "";
+  /* Esta se referencia con la anterior relativa (padre) */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 5px solid transparent;
+  /* Como es un cuadrado (BORDES) pero solo le pongo dimensión en la bottom
+    lo que conseguimos es que haga un triángulo */
+  border-bottom-color: #f06529;
+  /* Posición del contenedor donde aparece, mitad en este caso */
+  left: 50%;
+  top: -11px;
+  margin-left: -5px;
+  z-index: 19;
+}
+
+.submenu > a {
+  text-decoration: none;
+  color: white;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+main {
+  padding: 20px 0px 20px 20px;
+  background-image: url(../imgs/fondoForm.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  border-radius: 20px;
+  text-align: left;
+}
+
+#contenedorFormulario {
+  position: relative;
+  display: inline-block;
+  margin: 50px;
+  width: 600px;
+  padding: 20px 50px 20px 50px;
+  background: rgba(200, 200, 200, 0.7);
+  box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.4);
+  
+}
+
+#contenedorFormulario h1 {
+  position: absolute;
+  top: -16px;
+  left: 490px;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: "Aguafina Script", cursive;
+  font-style: italic;
+  color: #333;
+  letter-spacing: 5px;
+  box-shadow: 0px 0px 2px #777;
+  padding: 0px 10px 0px 10px;
+  margin: 0px 10px 0px 10px;
+}
+
+#formm div {
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), inset 0px 0px 40px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: bold;
+  padding: 1px 4px 1px 45px;
+  margin-bottom: 10px;
+  transition: all 0.4s ease-in;
+}
+
+#formm input[type="text"],
+#formm input[type="email"],
+#formm textarea {
+  height: 32px;
+  width: 330px;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), inset 0px 0px 40px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: bold;
+  padding: 1px 4px 1px 45px;
+  transition: all 0.4s ease-in;
+}
+
+#formm input[type="text"]:focus,
+#formm input[type="email"]:focus {
+  width: 370px;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+}
+
+
+
+#formm input[type="text"].nombre:valid{
+  background: url(../imgs/valid.png) 390px center no-repeat, url(../imgs/icon-nombre.png) 10px center no-repeat;
+}
+
+
+#formm input[type="email"].correo:valid {
+  background: url(../imgs/valid.png) 390px center no-repeat, url(../imgs/icon-correo.png) 10px center no-repeat;
+}
+
+
+
+#formm input[type="text"].nombre:invalid {
+  background: url(../imgs/invalid.png) 390px center no-repeat, url(../imgs/icon-nombre.png) 10px center no-repeat
+}
+#formm input[type="email"].correo:invalid {
+  background: url(../imgs/invalid.png) 390px center no-repeat, url(../imgs/icon-correo.png) 10px center no-repeat;
+}
+
+#formm input[type="text"].nombre:focus,#formm input[type="email"].correo:focus, textarea:focus {
+  background-color:white ;
+}
+
+.req>label::after {
+  content: '*';
+  width: 10px;
+  margin: 2px;
+}
+
+#formm textarea {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  width: 90%;
+  height: 150px;
+  background: url(../imgs/icon-mensaje.png) 10px center no-repeat;
+}
+
+#formm textarea:focus {
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+  background-color: white;
+}
+
+#formm input[type="submit"] {
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  border: 1px solid #434343;
+  color: white;
+  background: linear-gradient(to bottom, #5e5e5e, #2a2a2a);
+  box-shadow: inset 0px 1px 1px 1px #353535;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+#formm input[type="submit"]:hover {
+  background: linear-gradient(to top, #5e5e5e, #2a2a2a);
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 0px 0px 20px 20px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-family: "Courier New", Courier, monospace;
+  color: #404040;
+  font-size: 1em;
+}
+
+
