@@ -288,6 +288,88 @@ header {
   
   
 
+  /*CONTACTO*/
+  
+  #formulario{
+    width: 600px;
+    height: 600px;
+    background-color: beige;
+    margin-left:30%;
+    margin-bottom: 50px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px 1px black;
+    padding: 20px;
+  }
+
+
+  #formulario>form>div{ 
+  margin-top: 20px ; 
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), inset 0px 0px 40px rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: bold;
+  padding: 1px 4px 1px 45px;
+  margin-bottom: 10px;
+  transition: all 0.4s ease-in;
+  }
+  #formulario>form>div>label{
+    font-size: 1em;
+    color: black;
+    text-shadow: 1px 1px 1px 10px white;
+  }
+
+  #formulario input[type="text"]:focus,
+  #formulario input[type="email"]:focus,
+  #formulario input[type="number"]:focus{
+    width: 370px;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+    height: 25px;
+  }
+  
+
+  #formulario input[type="text"].nombre:valid,
+  #formulario input[type="text"].dni:valid,
+  #formulario input[type="email"]:valid,
+  #formulario input[type="text"].tel:valid,
+  #formulario input[type="date"]:valid,
+  #formulario input[type="color"]:valid,
+  #formulario input[type="number"]:valid
+  {
+    background: url(../espornets/valid.png) 330px center no-repeat;
+
+  }
+  #formulario input[type="text"].nombre:valid,
+  #formulario input[type="text"].dni:valid,
+  #formulario input[type="email"]:valid,
+  #formulario input[type="text"].tel:valid,
+  #formulario input[type="date"]:valid,
+  #formulario input[type="color"]:valid,
+  #formulario input[type="number"]:valid,
+  #formulario input[type=""]
+  {
+    background: url(../espornets/invalid.png) 330px center no-repeat;
+  }
+
+
+  #hform{
+    color: black;
+  }
+  
+  main{ background-color:white ;
+  
     
+  }
+
+  #padreForm{
+    display: flex;
+    flex-direction:column ;
+    background-image: url("../espornets/pexels-nappy-936094.jpg") ;
+    background-size:cover ;
+  }
+
+
+
+
   
  
