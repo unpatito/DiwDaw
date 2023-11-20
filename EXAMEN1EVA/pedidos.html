@@ -24,12 +24,18 @@
                   
               </ul>
               </li>
+              <li  class="submenu">Videos</a> 
+                <ul>
+                  <li><a href="video1.html">Video1</a></li>
+                  <li><a href="video2.html">Video2</a></li>
+                  
+              </ul>
+
+              </li>
 
     </nav>
     <main>
        <div id="padreForm">
-
-        <h1 id="hform">Formulario:</h1><br>
         <div id="formulario">
             
             <form>
@@ -58,12 +64,12 @@
             <div>
               
                 <label for="productos">Productos:</label>
-                <input type="text" list="productos" name="productos" id="productos">
-                <datalist id="productos">
-                    <option value="ZM-120-RUN" label="Zapatilla hombre runner"></option>
-                    <option value="ZM-150-RUN" label="Zapatilla hombre pronador"></option>
-                    <option value="ZM-150-SUP" label="Zapatilla hombre supinador"></option>
-                    <option value="ZM-150-PRO" label="Zapatilla hombre profesional"></option>
+                <input type="text" list="productoss" name="productos" class="productos" id="productos">
+                <datalist id="productoss">
+                    <option label="Zapatilla hombre runner"value="ZM-120-RUN"></option>
+                    <option label="Zapatilla hombre pronador"value="ZM-150-RUN"></option>
+                    <option label="Zapatilla hombre supinador"value="ZM-150-SUP"></option>
+                    <option label="Zapatilla hombre profesional"value="ZM-150-PRO"></option>
                   </datalist>   
 
             </div>
@@ -78,8 +84,10 @@
                 <label for="number">Unidades: </label>
                 <input type="number" name="number">
             </div>
-
-
+<br>
+            <div> 
+                  <input type="submit" id="enviar" value="Enviar">
+                </div>
             </form>
 
         </div>

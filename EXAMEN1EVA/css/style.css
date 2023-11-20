@@ -1,375 +1,530 @@
-*{
-    margin: 0;
-    padding: 0;
+@font-face {
+  font-family: form;
+  src: url("../fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf");
 }
 
-body{
-  
-        width: 80%;
-        margin: 0px auto 0px auto;
-        text-align: left;
-        background-image: url("../espornets/pexels-andrea-piacquadio-3760259.jpg");
-        background-repeat: no-repeat;
-        background-size:cover ;
-        
-        
-        
-      
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0px auto 0px auto;
+  text-align: left;
+  background-image: url("../espornets/pexels-andrea-piacquadio-3760259.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
-    font-family: "Courier New", Courier, monospace;
-    color: white;
-    font-size: 1.1em;
-    border-bottom: 6px solid black;
-    background: linear-gradient(to bottom, #006699 , #44baf5 );
-    border-radius: 20px 20px 0px 0px;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  font-size: 1.1em;
+  border-bottom: 6px solid black;
+  background-image: radial-gradient(
+    circle at 100% 0%,
+    #ff76c2 0,
+    #f96dc8 12.5%,
+    #e964cd 25%,
+    #d55cd3 37.5%,
+    #be55d8 50%,
+    #a250dd 62.5%,
+    #804fe3 75%,
+    #514fe8 87.5%,
+    #0051ec 100%
+  );
+}
+h1 {
+  animation: text-focus-in 1s ease;
+  color: white;
+}
 
-  }
-  h1{
-    
-    color: white;
-  }
+h1 > img {
+  width: 60px;
+  height: 60px;
+  margin-left: 30px;
+  margin-right: 30px;
+  animation: roll-in-left 0.6s ease-in;
+}
+a {
+  text-decoration: none;
+}
 
- h1 > img{
+nav > ul > li > a:hover {
+  animation: roll-in-left 0.6s ease-in;
+}
 
-    width: 60px;
-    height: 60px;
-    margin-left: 30px;
-    margin-right: 30px;
-    
-
-  }
-  a{
-    text-decoration:none;
-  }
-
-  nav {
-    font-family: Lucky;
-    font-size: 1.2em;
-    color: silver;
-    text-align: center;
-    background: linear-gradient(to bottom, rgb(201, 173, 49), rgb(240, 243, 60));
-  }
-  nav ul li{
-    color: white;
-    text-shadow:  2px 2px  #f06529;
-
-  }
-  nav ul li:hover{
-    text-shadow: 0px 0px 5px #ff7e42;
-    transition: 0,1s;
-   
-  }
-  li {
-    padding-top: 30px;
-    margin: 0px 100px 20px 100px;
-    list-style: none;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-  }
+nav {
+  font-family: Lucky;
+  font-size: 1.2em;
+  color: silver;
+  text-align: center;
+  background-image: radial-gradient(
+    circle at 51.33% 50%,
+    #90e4b7 40%,
+    #76deb8 45%,
+    #55d8ba 50%,
+    #1dd1be 55%,
+    #00cbc3 60%,
+    #00c5ca 65%,
+    #00c0d2 70%,
+    #00bbdb 75%,
+    #00b6e4 80%,
+    #00b1ec 85%,
+    #00acf3 90%,
+    #00a8f9 95%,
+    #00a4fd 100%
+  );
+}
+nav ul li {
+  color: white;
+  text-shadow: 2px 2px #f06529;
+}
+nav ul li:hover {
+  text-shadow: 0px 0px 5px #ff7e42;
+  transition: 0, 1s;
+}
+li {
+  padding-top: 30px;
+  margin: 0px 100px 20px 100px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
 
 /*Submenu Desplegable*/
 .submenu {
-    /*El padre marca origen de las coordenadas*/
-    position: relative;
-  }
-  
-  /*Enlaces del submenú*/
-  .submenu > ul > li > a {
-    color: white;
-    margin: auto;
-    text-decoration: none;
-  }
-  
-  /*Todo el submenú*/
-  .submenu > ul {
-    /*Hijo marca las coordenadas como desea, por ser su padre relative*/
-    position: absolute;
-    left: 10px;
-    /*Para que se mantenga oculto*/
-    height: 0px;
-    overflow: hidden;
-    width: 145px;
-    /*Transición de altura, tipo y duración*/
-    transition: height linear 0.2s;
-    /*Para que no se solapen*/
-    z-index: 2;
-  }
-  /*La transición*/
-  .submenu:hover > ul {
-    height: 200px;
-  }
-  
-  
-  /*Cada elemento del submenú */
-  .submenu > ul > li {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: block;
-    margin: 0px;
-    background-color: #ff7e42;
-  }
-  /*Solo Impares*/
-  .submenu > ul > li:nth-child(odd) {
-    background-color: #f06529 !important;
-  }
-  
-  
-  /* Redondear los bordes */
-  .submenu > ul > li:first-child {
-    /*Redondeo superior*/
-    border-radius: 8px 8px 0px 0px;
-    margin-top: 15px;
-    position: relative;
-  }
-  .submenu > ul > li:last-child {
-    /*Redondeo inferior*/
-    border-radius: 0px 0px 8px 8px;
-  }
-  
-  
-  /*Para que aparezca el triángulo en el menú*/
-  /*Son el 1º hijo del 2º nivel del submenú*/
-  nav > ul > li > ul > li:first-child:before {
-    /*Sino nos sale nada*/
-    content: '';
-    /* Esta se referencia con la anterior relativa (padre) */
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border: 5px solid transparent;
-    /* Como es un cuadrado (BORDES) pero solo le pongo dimensión en la bottom
+  /*El padre marca origen de las coordenadas*/
+  position: relative;
+}
+
+/*Enlaces del submenú*/
+.submenu > ul > li > a {
+  color: white;
+  margin: auto;
+  text-decoration: none;
+}
+
+/*Todo el submenú*/
+.submenu > ul {
+  /*Hijo marca las coordenadas como desea, por ser su padre relative*/
+  position: absolute;
+  left: 10px;
+  /*Para que se mantenga oculto*/
+  height: 0px;
+  overflow: hidden;
+  width: 145px;
+  /*Transición de altura, tipo y duración*/
+  transition: height linear 0.2s;
+  /*Para que no se solapen*/
+  z-index: 2;
+}
+/*La transición*/
+.submenu:hover > ul {
+  height: 200px;
+}
+
+/*Cada elemento del submenú */
+.submenu > ul > li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  margin: 0px;
+  background-color: #42c3ff;
+}
+/*Solo Impares*/
+.submenu > ul > li:nth-child(odd) {
+  background-color: #29e3f0 !important;
+}
+
+/* Redondear los bordes */
+.submenu > ul > li:first-child {
+  /*Redondeo superior*/
+  border-radius: 8px 8px 0px 0px;
+  margin-top: 15px;
+  position: relative;
+}
+.submenu > ul > li:last-child {
+  /*Redondeo inferior*/
+  border-radius: 0px 0px 8px 8px;
+}
+
+/*Para que aparezca el triángulo en el menú*/
+/*Son el 1º hijo del 2º nivel del submenú*/
+nav > ul > li > ul > li:first-child:before {
+  /*Sino nos sale nada*/
+  content: "";
+  /* Esta se referencia con la anterior relativa (padre) */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 5px solid transparent;
+  /* Como es un cuadrado (BORDES) pero solo le pongo dimensión en la bottom
     lo que conseguimos es que haga un triángulo */
-    border-bottom-color: #f06529;
-     /* Posición del contenedor donde aparece, mitad en este caso */
-    left: 50%;
-    top: -11px;
-    margin-left: -5px;
-    z-index: 19;
-  }
-  
-  .submenu > a{
-    text-decoration: none;
-    color: white;
-  }
-  
-  nav>ul>li>a{
-    text-decoration: none ;
-    color: white;
-  }
+  border-bottom-color: #f06529;
+  /* Posición del contenedor donde aparece, mitad en este caso */
+  left: 50%;
+  top: -11px;
+  margin-left: -5px;
+  z-index: 19;
+}
 
-  #padre{
-    display: flex;
-    flex-direction: row;
-    padding: 2px;
-    border: red 2px solid;
-    background-color: white;
+.submenu > a {
+  text-decoration: none;
+  color: white;
+}
 
-  }
+nav > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
 
-  #contenido{
-    display: flex;
-    flex-direction: row;
-    margin-right: 10px ;
-    border: red 2px solid;
-    width: 1200px;
-    height: 600px;
+#padre {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  align-items: center;
+  margin-left: 300px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
-  }
-  #barra{
-    display: flex;
-    flex-direction: column;
-    padding: 7px;
-    border: rgb(68, 0, 255) 2px solid;
-    width: 300px;
-    height: auto;
-    border: green 2px solid;
-    text-align: center;
-    
-  }
+#contenido {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
 
-  .publi{
-    border: blue 2px solid;
-    margin-bottom:10px ;
-  }
+  width: 1200px;
+  height: 740px;
+}
+#barra {
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
 
-  table td{
-    border: orange 2px solid;
-    color: black;
-    font-size: 1.0em;
-    text-align: center;
-    
-  }
-  table{
-    width: 1200px;
-    background-color: beige;
-  }
-  footer {
-    color: white;
-    font-size: 0.7em;
-    text-align: center;
-    background: linear-gradient(to bottom, #44baf5, #006699);
-    border-top: 6px solid black;
-    padding: 15px 15px;
-    border-radius: 0px 0px 20px 20px;
-  }
+  width: 300px;
+  height: auto;
 
-  #contenido_padre>.hombre{
-    color: black;
-    letter-spacing: 1px;
-    font-size: 1em;
-    font-style: italic;
-    background-color: rgb(0, 174, 255);
+  text-align: center;
+}
 
+.publi {
+  margin-bottom: 10px;
+}
 
-  }
-  #contenido_padre>.mujer{
-    color: black;
-    letter-spacing: 1px;
-    font-size: 1em;
-    font-style: italic;
-    background-color: pink;
+table td {
+  border: orange 2px solid;
+  color: black;
+  font-size: 1em;
+  text-align: center;
+}
+td:hover {
+  background-color: white;
+  animation: text-focus-in 0.2s ease-in;
+}
+table {
+  width: 1200px;
+  background-color: none;
+}
+footer {
+  color: white;
+  font-size: 0.7em;
+  text-align: center;
+  background-image: radial-gradient(
+    circle at 100% 0%,
+    #ff76c2 0,
+    #f96dc8 12.5%,
+    #e964cd 25%,
+    #d55cd3 37.5%,
+    #be55d8 50%,
+    #a250dd 62.5%,
+    #804fe3 75%,
+    #514fe8 87.5%,
+    #0051ec 100%
+  );
+  border-top: 6px solid black;
+  padding: 15px 15px;
+}
 
+#contenido_padre > .hombre {
+  color: black;
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-style: italic;
+  background-color: rgb(0, 174, 255);
+}
+#contenido_padre > .mujer {
+  color: black;
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-style: italic;
+  background-color: pink;
+}
 
-  }
+#hombre {
+  width: 50%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  #hombre{
-    border: purple 2px solid;
-    width: 50%;
-    height: auto;
-   background-color: beige;
-    
+#hombre:hover,
+#mujer:hover,
+#barra:hover {
+  background-color: white;
+  animation: text-focus-in 1s ease;
+}
 
+#mujer {
+  width: 50%;
+  height: auto;
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  }
-  #mujer{
-    border: rgb(128, 0, 0) 2px solid;
-    width: 50%;
-    height: auto;
-    background-color: beige;
-  }
+img {
+  margin-top: 7px;
+  width: 250px;
+  height: 300px;
+  border-radius: 2%;
+  box-shadow: 2px 2px 2px 1px black;
+  animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
 
-   img{
-    margin-top: 7px;
-    width: 250px;
-    height: 300px;
-    border-radius: 2%;
-    box-shadow: 2px 2px 2px 1px black;
-  }
- 
-  #contenido>#hombre>div>h2{
-    padding: 7px;
-    font-size: 1.3;
-    color: black;
+#contenido > #hombre > div > h2 {
+  padding: 7px;
+  font-size: 1.3;
 
-    
-  }
-  #contenido>#hombre>div>p{
-    padding: 20px;
-    font-size: 0.9em;
-    color: black;
-    
-    
-  }
-  #contenido>#mujer>div>h2{
-    padding: 7px;
-    font-size: 1.3;
-    color: black;
+  animation: tracking-out-contract 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  text-align: center;
+}
+#contenido > #hombre > div > p {
+  padding: 20px;
+  font-size: 1em;
+}
+#contenido > #mujer > div > h2 {
+  padding: 7px;
+  font-size: 1.3;
 
-    
-  }
-  #contenido>#mujer>div>p{
-    padding: 20px;
-    font-size: 0.9em;
-    color: black; 
-  }
-  
-  
+  animation: tracking-out-contract 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  text-align: center;
+}
+#contenido > #mujer > div > p {
+  padding: 20px;
+  font-size: 1em;
 
-  /*CONTACTO*/
-  
-  #formulario{
-    width: 600px;
-    height: 600px;
-    background-color: beige;
-    margin-left:30%;
-    margin-bottom: 50px;
-    border: 2px solid black;
-    box-shadow: 2px 2px 2px 1px black;
-    padding: 20px;
-  }
+  background-color: w;
+}
+#contenido {
+  color: rgb(22, 22, 22);
 
+  font-weight: bold;
+}
 
-  #formulario>form>div{ 
-  margin-top: 20px ; 
+/*CONTACTO*/
+#enviar {
+  padding: 5px;
+}
+#enviar:hover{
+  color: white;
+  background-color: rgb(95, 0, 29);
+}
+
+#formulario {
+  margin-top: 70px;
+  width: 500px;
+  height: 600px;
+  background-color: white;
+  margin-left: 30%;
+  margin-bottom: 50px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 1px black;
+  padding: 20px;
+  font-family: form;
+  animation: form-move 2s ease-in;
+}
+
+#formulario > form > div {
+  margin-top: 20px;
   display: inline-block;
   border: 1px solid #e5e5e5;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), inset 0px 0px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
+    inset 0px 0px 40px rgba(0, 0, 0, 0.1);
   color: black;
   font-weight: bold;
   padding: 1px 4px 1px 45px;
   margin-bottom: 10px;
   transition: all 0.4s ease-in;
+}
+#formulario > form > div > label {
+  font-size: 1em;
+  color: black;
+  text-shadow: 1px 1px 1px 10px white;
+}
+
+#formulario input[type="text"]:focus,
+#formulario input[type="email"]:focus,
+#formulario input[type="number"]:focus {
+  width: 370px;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+  height: 25px;
+}
+
+#formulario input[type="text"].nombre:valid,
+#formulario input[type="text"].dni:valid,
+#formulario input[type="email"]:valid,
+#formulario input[type="text"].tel:valid,
+#formulario input[type="text"].productos:valid,
+#formulario input[type="date"]:valid,
+#formulario input[type="color"]:valid,
+#formulario input[type="number"]:valid {
+  background: url(../espornets/valid.png) 330px center no-repeat;
+}
+#formulario input[type="text"].nombre:valid,
+#formulario input[type="text"].dni:valid,
+#formulario input[type="email"]:valid,
+#formulario input[type="text"].tel:valid,
+#formulario input[type="text"].productos:valid,
+#formulario input[type="date"]:valid,
+#formulario input[type="color"]:valid,
+#formulario input[type="number"]:valid,
+#formulario input[type=""] {
+  background: url(../espornets/invalid.png) 330px center no-repeat;
+}
+
+#hform {
+  color: black;
+}
+
+#padreForm {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../espornets/pexels-nappy-936094.jpg");
+  background-size: cover;
+}
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
   }
-  #formulario>form>div>label{
-    font-size: 1em;
-    color: black;
-    text-shadow: 1px 1px 1px 10px white;
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-in-left {
+  0% {
+    -webkit-transform: translateX(-800px) rotate(-540deg);
+    transform: translateX(-800px) rotate(-540deg);
+
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-out-contract {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*VIDEOS*/
+
+#padre_video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#titulo > h2 {
+  margin-top: 20px;
+
+  font-size: 40px;
+}
+
+video {
+  border: black 3px solid;
+  width: "600";
+  height: "640";
+  margin-bottom: 230px;
+  margin-top: 100px;
+}
+
+#titulo > h2:hover {
+  background-color: white;
+  font-size: 45px;
+  box-shadow: 2px 2px 2px 2px black;
+
+  border-radius: 4px 4px 4px 4px;
+}
+
+@keyframes video-rotate {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  75% {
+    rotate: 360deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+@keyframes form-move {
+  0% {
+    rotate: 4deg;
   }
 
-  #formulario input[type="text"]:focus,
-  #formulario input[type="email"]:focus,
-  #formulario input[type="number"]:focus{
-    width: 370px;
-    box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
-    height: 25px;
+  100% {
+    rotate: 0deg;
   }
-  
+}
 
-  #formulario input[type="text"].nombre:valid,
-  #formulario input[type="text"].dni:valid,
-  #formulario input[type="email"]:valid,
-  #formulario input[type="text"].tel:valid,
-  #formulario input[type="date"]:valid,
-  #formulario input[type="color"]:valid,
-  #formulario input[type="number"]:valid
-  {
-    background: url(../espornets/valid.png) 330px center no-repeat;
-
-  }
-  #formulario input[type="text"].nombre:valid,
-  #formulario input[type="text"].dni:valid,
-  #formulario input[type="email"]:valid,
-  #formulario input[type="text"].tel:valid,
-  #formulario input[type="date"]:valid,
-  #formulario input[type="color"]:valid,
-  #formulario input[type="number"]:valid,
-  #formulario input[type=""]
-  {
-    background: url(../espornets/invalid.png) 330px center no-repeat;
-  }
-
-
-  #hform{
-    color: black;
-  }
-  
-  main{ background-color:white ;
-  
-    
-  }
-
-  #padreForm{
-    display: flex;
-    flex-direction:column ;
-    background-image: url("../espornets/pexels-nappy-936094.jpg") ;
-    background-size:cover ;
-  }
-
-
-
-
-  
- 
+.animacionVideo {
+  animation: video-rotate 1s 0.2s ease-in;
+}
