@@ -1,0 +1,49 @@
+.pagina {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav,
+nav > img {
+  height: 250px;
+  width: 100%;
+}
+header {
+  width: 100%;
+}
+header > img,
+header > p {
+  height: 250px;
+  margin-top: 50px;
+  width: 100%;
+}
+aside {
+  width: 50%;
+  /*  background-color: rgb(0, 162, 255);*/
+}
+
+main {
+  width: 50%;
+  /* background-color: grey;*/
+}
+
+p {
+  font-size: 2vw;
+}
+
+@media all and (width<800px) {
+  div,
+  nav,
+  header,
+  aside,
+  main {
+    /* Cuando el ancho sea inferior a 600px el elemento será un bloque */
+    display: block !important;
+    /* Se ajustarán al ancho de la ventana */
+    width: 100% !important;
+    margin: auto !important;
+    /* La posición será estática (flujo normal del documento) */
+    position: static !important;
+    /* los elementos dejarán de ser flotantes */
+    float: none !important;
+  }
+}
