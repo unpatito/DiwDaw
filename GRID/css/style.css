@@ -211,7 +211,7 @@ h2:hover + .grid .grid-item, h2:hover +.grid2 .grid-item  {
   }
 }
 /*SECCION MEDIA QUERY MENOR  A 500PX */
-@media (width < 500px) {
+@media (width <= 500px) {
   /*SECCION GRID 1*/
   .grid {
     display: grid;
