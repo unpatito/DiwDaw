@@ -1,0 +1,46 @@
+header {
+  color: black;
+  background-color: grey;
+  font-size: 2em;
+  padding-left: 5vw;
+}
+
+nav {
+  text-align: center;
+}
+nav ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  color: #eee;
+  background-color: #666;
+  cursor: grab;
+}
+nav ul a {
+  margin: 5px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #eee;
+  background-color: #666;
+}
+nav ul a :hover {
+  color: #fff;
+  background-color: #888;
+}
+nav ul .categoria .submenu li {
+  overflow: hidden;
+  display: none;
+}
+nav ul .categoria:hover .submenu {
+  display: flex;
+  flex-direction: column;
+}
+nav ul .categoria:hover .submenu li {
+  display: block;
+}
+
+footer {
+  color: #eee;
+  background-color: #666;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */
