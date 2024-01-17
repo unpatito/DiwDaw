@@ -1,0 +1,29 @@
+@mixin textoFondo(){
+    color:$colorTexto;
+    background-color: $colorFondo;
+}
+@mixin textoFondoAlternativo(){
+    color: $colorSobre;
+    background-color: $colorRaton;
+}
+@mixin boxsizing ($type){
+-webkit-box-sizing: $type;
+-moz-box-sizing: $type;
+box-sizing: $type;
+}
+@mixin transition ($property, $duration, $timing:linear){
+    transition: $property $duration $timing;
+
+}
+@mixin transition2 ($name, $duration, $timing:linear){
+    transition: $name, $duration, $timing;
+}
+
+@mixin respond-to ($size, $size2) {
+    @media($size : $size2){
+        @content
+    }
+
+    
+    
+}
