@@ -1,3 +1,6 @@
+
+@import "_mixin.scss";
+
 $colorTexto: #eee;
 $colorTextoHover:lighten(#eee, 10%);
 $colorRaton:#888;
@@ -26,6 +29,7 @@ $colorTitulo:darken(#15a, 10%);
   padding: 30px 20px;
 
   .col-left{
+    
     box-sizing: border-box;
     width: 30%;
     float: left;
@@ -37,6 +41,10 @@ $colorTitulo:darken(#15a, 10%);
     button{
       @extend %button-block;
     }
+    @include respond-to(max-width , 800px){
+      float: none;
+      width: 100%;
+    };
 
   }
   .col-right{
@@ -48,6 +56,11 @@ $colorTitulo:darken(#15a, 10%);
       color:$colorTitulo;
       font-size: 1.6em;
     }
+    @include respond-to(max-width , 800px){
+    margin-left: 0;
+      width: 100%;
+    };
+
   }
   .button-action{
     background-color: $colorFondo;
@@ -55,6 +68,10 @@ $colorTitulo:darken(#15a, 10%);
     &:hover{
       background-color: lighten(#15a, 20% );;
     }
+    @include respond-to(max-width , 1024px){
+     padding: 10px 20px;
+    };
+
   }
 }
 
@@ -101,6 +118,10 @@ nav {
           }
       }
 
+      @include respond-to(max-width , 1024px){
+        display: none
+       };
+
   }
   li.categoria {
     float: left;
@@ -139,7 +160,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0px;
     padding: 5px;

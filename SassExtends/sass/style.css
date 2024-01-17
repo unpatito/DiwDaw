@@ -25,6 +25,12 @@
   float: left;
   padding: 10px;
 }
+@media (max-width: 800px) {
+  #contenido .col-left {
+    float: none;
+    width: 100%;
+  }
+}
 #contenido .col-right {
   box-sizing: border-box;
   margin-left: 30%;
@@ -35,12 +41,23 @@
   color: #0c3e7c;
   font-size: 1.6em;
 }
+@media (max-width: 800px) {
+  #contenido .col-right {
+    margin-left: 0;
+    width: 100%;
+  }
+}
 #contenido .button-action {
   background-color: #15a;
   color: white;
 }
 #contenido .button-action:hover {
   background-color: #3686eb;
+}
+@media (max-width: 1024px) {
+  #contenido .button-action {
+    padding: 10px 20px;
+  }
 }
 
 nav {
@@ -80,6 +97,11 @@ nav a:hover {
   background-color: #888;
   animation: iluminar 0.4s linear;
 }
+@media (max-width: 1024px) {
+  nav {
+    display: none;
+  }
+}
 
 li.categoria {
   float: left;
@@ -113,7 +135,7 @@ footer {
   color: #eee;
   background-color: #15a;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0px;
   padding: 5px;

@@ -19,6 +19,11 @@ box-sizing: $type;
     transition: $name, $duration, $timing;
 }
 
-@mixin respond-to{
+@mixin respond-to ($size, $size2) {
+    @media($size : $size2){
+        @content
+    }
+
+    
     
 }
