@@ -1,104 +1,3 @@
-nav#desktop {
-  position: absolute;
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-nav#desktop ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-}
-nav#desktop ul .submenu {
-  position: absolute;
-  height: 0px;
-  overflow: hidden;
-  transition: height 0.5s ease-out;
-}
-nav#desktop > ul {
-  width: 100%;
-  height: 32px;
-  color: #eee;
-  background-color: #15a;
-}
-nav#desktop a {
-  color: #eee;
-  background-color: #15a;
-  text-decoration: none;
-  width: 160px;
-  padding: 7px 20px;
-  display: block;
-  text-align: center;
-  cursor: pointer;
-}
-nav#desktop a:hover {
-  color: #166cd8;
-  background-color: #888;
-  animation: iluminar 0.4s linear;
-}
-@media (max-width: 1024px) {
-  nav#desktop {
-    display: none;
-  }
-}
-
-li.categoria {
-  float: left;
-}
-li.categoria > a {
-  transition: padding 0.4s ease-out;
-}
-li.categoria:hover > a {
-  padding: 10px 20px;
-}
-li.categoria:hover ul.submenu {
-  height: 100px;
-}
-
-nav#mobile {
-  display: none;
-  float: right;
-}
-nav#mobile:hover ul {
-  height: auto;
-}
-nav#mobile ul {
-  margin: 0px;
-  height: 0px;
-  overflow: hidden;
-  list-style-type: none;
-  position: absolute;
-  right: 10px;
-  top: 40px;
-}
-nav#mobile ul a {
-  color: #eee;
-  background-color: #138;
-  text-decoration: none;
-  width: 160px;
-  padding: 7px 20px;
-  display: block;
-  text-align: center;
-  cursor: pointer;
-  font-size: 0.6em;
-  font-weight: normal;
-}
-nav#mobile ul a:hover {
-  color: white;
-  background-color: #1744b5;
-  animation: iluminar 0.4s linear;
-}
-nav#mobile .icon-menu {
-  background-image: url(../images/menu.png);
-  background-position: 0px 0px;
-  height: 30px;
-  width: 32px;
-}
-@media (max-width: 800px) {
-  nav#mobile {
-    display: block;
-  }
-}
-
 #contenido .col-left button {
   box-sizing: border-box;
   width: 100%;
@@ -161,6 +60,135 @@ nav#mobile .icon-menu {
   }
 }
 
+nav#desktop {
+  position: absolute;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav#desktop ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+nav#desktop ul .submenu {
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s ease-out;
+}
+nav#desktop ul li.categoria {
+  float: left;
+}
+nav#desktop ul li.categoria > a {
+  transition: padding 0.4s ease-out;
+}
+nav#desktop ul li.categoria:hover > a {
+  padding: 10px 20px;
+}
+nav#desktop ul li.categoria:hover ul.submenu {
+  height: 100px;
+}
+nav#desktop > ul {
+  width: 100%;
+  height: 32px;
+  color: #eee;
+  background-color: #15a;
+}
+nav#desktop a {
+  color: #eee;
+  background-color: #15a;
+  text-decoration: none;
+  width: 160px;
+  padding: 7px 20px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+nav#desktop a:hover {
+  color: #166cd8;
+  background-color: #888;
+  animation: iluminar 0.4s linear;
+}
+@media (max-width: 1024px) {
+  nav#desktop {
+    display: none;
+  }
+}
+
+nav#mobile {
+  display: none;
+  float: right;
+}
+nav#mobile ul {
+  margin: 0px;
+  height: 0px;
+  overflow: hidden;
+  list-style-type: none;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+}
+nav#mobile ul li.categoria {
+  float: none;
+}
+nav#mobile:hover ul {
+  height: auto;
+}
+nav#mobile:hover ul a {
+  color: #eee;
+  background-color: #138;
+  text-decoration: none;
+  width: 160px;
+  padding: 7px 20px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+nav#mobile:hover ul a:hover {
+  color: white;
+  background-color: #1744b5;
+  animation: iluminar 0.4s linear;
+}
+@media (max-width: 800px) {
+  nav#mobile {
+    display: block;
+  }
+}
+
+.icon-menu {
+  background-image: url("../img/menu.png");
+  background-position: 0px 0px;
+  height: 30px;
+  width: 32px;
+}
+
+.icon-news {
+  background-image: url("../img/news.png");
+  background-position: 0px -90px;
+  height: 30px;
+  width: 39px;
+}
+
+.icon-money {
+  background-image: url("../img/money.png");
+  background-position: 0px -100px;
+  height: 50px;
+  width: 54px;
+}
+
+.icon-contact {
+  background-image: url("../img/contact.png");
+  background-position: 0px 0px;
+  height: 30px;
+  width: 30px;
+}
+
+i {
+  display: inline-block;
+}
+
 body {
   padding: 0px;
   margin: 0px;
@@ -174,6 +202,8 @@ header {
   font-weight: bold;
   text-shadow: 1px 1px 2px #aaa;
   font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #ddf;
+  color: #138;
 }
 
 footer {

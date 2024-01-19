@@ -1,0 +1,76 @@
+@import "_mixin.scss";
+$colorTexto: #eee;
+$colorTextoHover:lighten(#eee, 10%);
+$colorRaton:#888;
+$colorFondo: #15a;
+$colorFondoHover:lighten(#15a, 10% );
+$colorTitulo:darken(#15a, 10%);
+$theme:light;
+
+
+%button-block{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor:pointer;
+}
+
+%input-block{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  cursor:pointer;
+}
+#contenido{
+  padding: 30px 20px;
+
+  .col-left{
+    
+    box-sizing: border-box;
+    width: 30%;
+    float: left;
+    padding: 10px;
+   
+    input{
+      @extend %input-block;
+    }
+    button{
+      @extend %button-block;
+    }
+    @include respond-to(max-width , 800px){
+      float: none;
+      width: 100%;
+    };
+
+  }
+  .col-right{
+    box-sizing: border-box;
+    margin-left: 30%;
+    width: 70%;
+    padding: 10px;
+    h1{
+      color:$colorTitulo;
+      font-size: 1.6em;
+    }
+    @include respond-to(max-width , 800px){
+    margin-left: 0;
+      width: 100%;
+    };
+
+  }
+  .button-action{
+    background-color: $colorFondo;
+    color: white;
+    &:hover{
+      background-color: lighten(#15a, 20% );;
+    }
+    @include respond-to(max-width , 1024px){
+     padding: 10px 20px;
+    };
+
+  }
+}
