@@ -1,0 +1,8 @@
+
+
+//Funcion que recibe un color y lo devuelve en una escala de grises
+@function colorBack($color){
+
+    @return grayscale($color);
+
+}

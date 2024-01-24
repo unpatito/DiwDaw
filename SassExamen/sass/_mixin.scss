@@ -1,0 +1,55 @@
+@import "functions.scss";
+@mixin textoFondo(){
+    color:$colorTexto;
+    background-color: $colorFondo;
+}
+@mixin textoFondoAlternativo(){
+    color: $colorSobre;
+    background-color: $colorRaton;
+}
+@mixin boxsizing ($type){
+-webkit-box-sizing: $type;
+-moz-box-sizing: $type;
+box-sizing: $type;
+}
+
+//Mixin para modificar theme (para el body)
+@mixin theme($colortexto, $colorfondo, $colortitulo){
+    color:$colortexto;
+    background-color: $colorfondo;
+   & h1{
+        color:$colortitulo;
+        //un hover que pinte el fondo para saber que estamos sobre ese elemento
+        &:hover{
+            color:black;
+          background-color: colorBack($colortitulo);
+        }
+    }
+
+}
+@mixin transition ($property, $duration, $timing:linear){
+    transition: $property $duration $timing;
+
+}
+@mixin transition2 ($name, $duration, $timing:linear){
+    transition: $name, $duration, $timing;
+}
+
+//Responsive con if para comprobar si se trata de una resolucion intermedia
+@mixin respond-to ($size, $size2, $type) {
+    @if($type =="m"){
+        @media(width:($size2 >1024px && $size2<=800px)){
+            @content
+        }
+
+    }@else{
+        @media($size : $size2){
+            @content
+        }
+    }
+    
+
+
+}
+
+

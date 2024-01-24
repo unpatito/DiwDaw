@@ -1,0 +1,58 @@
+@import "__contenido.scss";
+@import "__menu.scss";
+@import "variables.scss";
+@import "functions.scss";
+
+
+*{
+  i{ display: inline-block;}
+  body {
+  
+    padding: 0px;
+    margin: 0px;
+    footer {
+      color: $colorTexto;
+      background-color: $colorFondo;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: fixed;
+      width: 100%;
+      bottom: 0px;
+      padding: 5px;
+    }
+    header {
+
+      padding: 12px 30px;
+      font-size: 1.8em;
+      color: #444;
+      background-color: $colorTexto;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #aaa;
+      font-family: Georgia, "Times New Roman", Times, serif;
+  
+      @if $theme ==dark {
+        background-color: #138;
+      }@else{
+        background-color: #ddf;
+        color:#138 ;
+      }
+      
+    }
+//Cambiar el estilo del body si el theme es dark (estilo del body independiente del header)
+    @if $theme==dark {
+      @include theme($colortexto, $colorfondo, $colortitulo);
+      
+    }@else{
+      background-color: #ddf;
+      color:#138 ;
+    }
+  }
+}
+  
+  
+ 
+
+
+
+  
