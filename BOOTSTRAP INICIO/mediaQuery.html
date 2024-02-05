@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    * {
+      text-align: center;
+    }
+
+    .verde {
+      background-color: greenyellow;
+      border: 2px solid black;
+      text-align: left;
+    }
+    .amarillo1 {
+      background-color: yellow;
+      border: 2px solid black;
+      text-align: right;
+    }
+    .amarillo2 {
+      background-color: yellow;
+      border: 2px solid black;
+      text-align: left;
+    }
+
+    .rojo {
+      background-color: red;
+      height: 300px;
+      border: 2px solid black;
+      font-weight: 1000;
+      font-size: 80px;
+    }
+    .rojo2 {
+      background-color: red;
+      height: 300px;
+      border: 2px solid black;
+      font-weight: 1000;
+      font-size: 80px;
+    }
+    .rojo3 {
+      background-color: red;
+      height: 300px;
+      border: 2px solid black;
+      font-weight: 1000;
+      font-size: 80px;
+    }
+    @media (max-width:768px) {
+      .verde {
+        background-color: cyan;
+      }
+      .rojo {
+        text-align: left;
+      }
+      .rojo2 {
+        text-align: right;
+      }
+      .rojo3 {
+        text-align: center;
+        background-color: greenyellow;
+      }
+      .amarillo1, .amarillo2 {
+        text-align: center;
+      }
+    }
+
+
+    @media (width<=576px){
+      .verde{
+        background-color: rgb(224, 98, 59);
+      }
+      .rojo{
+        text-align: left;
+      }
+      .rojo2{
+        text-align: center;
+        background-color: cyan;
+      }
+      .rojo3{
+        background-color: red;
+        text-align: right;
+      }
+
+    }
+  </style>
+  <body>
+    <div class="row p-4">
+      <div class="col-md p-2 mt-2 ms-2 me-2 verde">Header</div>
+    </div>
+
+    <div class="row p-4">
+      <div class="col-md col-sm col-xs-12 rojo p-2 mt-1 ms-2 me-3">1</div>
+      <div class="col-md col-sm col-xs-12 rojo2 p-2 mt-2 ms-2 me-3">2</div>
+      <div class="col-md col-sm-12 col-xs-12  rojo3 p-2 mt-2 ms-2 me-3">3</div>
+    </div>
+
+    <div class="row p-4">
+      <div class="col-md col-sm-12 me-4 amarillo1">Footer 1</div>
+      <div class="col-md col-sm-12 mt-2 me-4 amarillo2">Footer 2</div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
